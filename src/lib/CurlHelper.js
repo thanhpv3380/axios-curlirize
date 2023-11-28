@@ -1,9 +1,10 @@
-export class CurlHelper {
+class CurlHelper {
   constructor(config) {
     this.request = config;
   }
 
   getHeaders() {
+    console.log(this.request);
     let headers = this.request.headers,
       curlHeaders = "";
 
@@ -92,3 +93,5 @@ export class CurlHelper {
       .replace(/\s{2,}/g, " ");
   }
 }
+
+module.exports = { CurlHelper };

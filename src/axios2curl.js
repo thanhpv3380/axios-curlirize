@@ -1,16 +1,17 @@
-import { CurlHelper } from './lib/CurlHelper';
+const { CurlHelper } = require("./lib/CurlHelper");
 
 function defaultLogCallback(curlResult, err) {
   const { command } = curlResult;
-  if (err) {
-    console.error(err);
-  } else {
-    console.info(command);
-  }
+  console.log("xxx");
+  // if (err) {
+  //   console.error(err);
+  // } else {
+  //   console.info(command);
+  // }
 }
 
-export default (instance, callback = defaultLogCallback) => {
-  instance.interceptors.request.use((req) => {
+module.exports = (instance, callback = defaultLogCallback) => {
+  instance.interceptors.request.use(req => {
     try {
       const curl = new CurlHelper(req);
       req.curlObject = curl;
@@ -29,4 +30,3 @@ export default (instance, callback = defaultLogCallback) => {
     }
   });
 };
-
