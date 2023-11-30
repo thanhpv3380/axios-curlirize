@@ -2,12 +2,11 @@ const { CurlHelper } = require("./lib/CurlHelper");
 
 function defaultLogCallback(curlResult, err) {
   const { command } = curlResult;
-  console.log("xxx");
-  // if (err) {
-  //   console.error(err);
-  // } else {
-  //   console.info(command);
-  // }
+  if (err) {
+    console.error(err);
+  } else {
+    console.info(command);
+  }
 }
 
 module.exports = (instance, callback = defaultLogCallback) => {

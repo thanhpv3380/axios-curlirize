@@ -1,6 +1,6 @@
 {
-  "name": "axios2curl",
-  "version": "1.0.0",
+  "name": "@thanhpv3380/axios2curl",
+  "version": "1.0.2",
   "description": "Convert axios to curl",
   "main": "index.js",
   "repository": {
@@ -13,8 +13,5 @@
     "debug"
   ],
   "author": "henry",
-  "homepage": "https://github.com/thanhpv3380/axios2curl#readme",
-  "dependencies": {
-    "axios": "^1.6.2"
-  }
+  "homepage": "https://github.com/thanhpv3380/axios2curl#readme"
 }

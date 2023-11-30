@@ -4,7 +4,6 @@ class CurlHelper {
   }
 
   getHeaders() {
-    console.log(this.request);
     let headers = this.request.headers,
       curlHeaders = "";
 
